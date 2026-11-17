@@ -1,0 +1,66 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: ${yunshan.datasource.driver-class-name}
+      url: jdbc:mysql://${yunshan.datasource.host}:${yunshan.datasource.port}/${yunshan.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${yunshan.datasource.username}
+      password: ${yunshan.datasource.password}
+  redis:
+    host: ${yunshan.redis.host}
+    port: ${yunshan.redis.port}
+    password: ${yunshan.redis.password}
+    database: ${yunshan.redis.database}
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.yunshan.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      yunshan:
+        mapper: debug
+        service: info
+        controller: info
+
+yunshan:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: yunshan-admin-2026
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    user-secret-key: yunshan-user-2026
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    endpoint: ${yunshan.alioss.endpoint}
+    access-key-id: ${yunshan.alioss.access-key-id}
+    access-key-secret: ${yunshan.alioss.access-key-secret}
+    bucket-name: ${yunshan.alioss.bucket-name}
+  wechat:
+    appid: ${yunshan.wechat.appid}
+    secret: ${yunshan.wechat.secret}
+    mchid : ${yunshan.wechat.mchid}
+    mchSerialNo: ${yunshan.wechat.mchSerialNo}
+    privateKeyFilePath: ${yunshan.wechat.privateKeyFilePath}
+    apiV3Key: ${yunshan.wechat.apiV3Key}
+    weChatPayCertFilePath: ${yunshan.wechat.weChatPayCertFilePath}
+    notifyUrl: ${yunshan.wechat.notifyUrl}
+    refundNotifyUrl: ${yunshan.wechat.refundNotifyUrl}
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: your-ak

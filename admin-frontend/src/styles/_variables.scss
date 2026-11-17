@@ -1,0 +1,68 @@
+/* Variables */
+
+// Base color —— 云膳到家品牌色
+$mine: #0E9384;              // 主品牌色：膳青
+$mine-light: #34B3A4;        // 膳青浅
+$mine-deep: #0B786C;         // 膳青深
+$accent: #F0B429;            // 点缀色：琥珀金，仅少量装饰使用
+$loginBg: #E8F6F3;           // 登录页背景：膳青浅雾
+$blue: #4A9DEA;
+$green: #1DC779;
+$yellow: #F5B33D;
+$pink: #F56C6C;
+$block: #000;
+$gray-1: #20232A;
+$gray-2: #6B7280;
+$gray-3: #9CA3AF;
+$gray-4: #D8DDE3;
+$gray-5: #F3F4F7;
+$gray-6: #EBEEF5;
+$bgColor: #F6F8FA;
+$white: #fff;
+
+// Sidebar —— 墨青
+$sideBarWidth: 190px;
+$subMenuBg: #10312E;
+$subMenuHover: #16403C;
+$subMenuActiveText: #5EEAD4;
+$menuBg: #0E2624;
+$menuText: #93B0AC;
+$menuActiveText: #5EEAD4;    // 激活文字：薄荷青，与主色同系
+
+// Login page
+$lightGray: #1F2937;
+$darkGray: #889aa4;
+$loginCursorColor: #1F2937;
+
+// The :export directive is the magic sauce for webpack
+// https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
+:export {
+  menuBg: $menuBg;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+}
+
+.avatar-uploader .el-upload{
+  // border: dashed 2px #D8DDE3 !important;
+  border-radius: 4px !important;
+  background: #FCFCFC;
+}
+.avatar-uploader .avatar-uploader-icon{
+  background: #FCFCFC;
+}
+.avatar-uploader .el-icon-plus:before{
+  content: '上传图片' !important;
+  font-size: 12px;
+  color:#000;
+}
+
+
+// 弹框样式处理
+.el-dialog{
+  border-radius: 8px;
+}
+.el-dialog__header{
+  background: #FBFBFA;
+  border-radius: 8px 8px 0 0;
+  border: none;
+}

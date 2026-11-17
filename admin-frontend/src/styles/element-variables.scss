@@ -1,0 +1,24 @@
+/* Element Variables */
+
+// Override Element UI variables —— 云膳到家品牌色系
+
+$--color-primary: #0E9384;
+$--color-success: #17A673;
+$--color-warning: #F0B429;
+$--color-danger: #E5484D;
+$--color-info: #6B7280;
+$--button-font-weight: 500;
+$--border-color-light: #E4E9EF;
+$--border-color-lighter: #EDF1F5;
+$--table-border: 1px solid #EDF1F5;
+$--color-text-primary: #1F2937;
+$--color-text-regular: #6B7280;
+$--color-text-placeholder: #9CA3AF;
+$--border-color-base: #D8DDE3;
+$--background-color-base: #F3F6F9;
+
+// Icon font path, required
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// Apply overrided variables in Element UI
+@import '~element-ui/packages/theme-chalk/src/index';
